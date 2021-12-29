@@ -62,6 +62,7 @@
   }
 
   .oppia-preview-state-warning {
+    animation: oppia-preview-state-warning-fade-in-out 8s ease-in forwards;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -71,12 +72,32 @@
     left: 6px;
     max-width: 296px;
     padding: 3px;
-    position: absolute;
+    position: fixed;
     text-align: left;
     top: 63px;
     white-space: normal;
     z-index: 1060;
   }
+
+  @keyframes oppia-preview-state-warning-fade-in-out {
+    0% {
+      left: -260px;
+      opacity: 0;
+    }
+    10% {
+      left: 6px;
+      opacity: 1;
+    }
+    90% {
+      left: 6px;
+      opacity: 1;
+    }
+    100% {
+      left: -260px;
+      opacity: 0;
+    }
+  }
+
   preview-tab .oppia-param-column {
     padding: 1px 5px;
   }
